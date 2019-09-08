@@ -17,7 +17,9 @@ Arxiv preprint: https://arxiv.org/abs/1908.06716
 4. Run fitmodel_annenberg_v3.R for age_grouping_multiplier = 12,48,72 and for all three models in the variables m_file,m_name
 5. Run poststrat_annenberg_v3.R
 
-Notes: 
+## Notes: 
 
-To download the 2006-2010 5-year ACS, download both United States Population Records and United States Housing Unit Records in the data set 2006-2010 ACS 5-year Public Use Microdata Samples (PUMS) - CSV format, which can be found on https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t#
+1. To download the 2006-2010 5-year ACS, download both United States Population Records and United States Housing Unit Records in the data set 2006-2010 ACS 5-year Public Use Microdata Samples (PUMS) - CSV format, which can be found on https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t#
+2. The US heatmap and proportion tables in the Annenberg data analysis are derived from annenbergphone2008.txt and acs_ps.rds
+3. For a working simulation example that doesn't require downloading data files, see my StanCon 2019 repo.
 
