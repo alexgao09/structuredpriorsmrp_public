@@ -1,4 +1,10 @@
-# structuredpriorsmrp_public
+# Code for reproducing results in "Improving multilevel regression and poststratification with structured priors"
+
+## Authors
+- Yuxiang Gao
+- Lauren Kennedy
+- Daniel Simpson
+- Andrew Gelman
 
 Arxiv preprint: https://arxiv.org/abs/1908.06716
 
