@@ -47,3 +47,4 @@ acs_ps %>% group_by(education) %>%
 
 3. For a working simulation example that doesn't require downloading data files, see my StanCon 2019 repo.
 
+4. Noncentered parameterizations were used for the simulation studies whereas centered parameterizations were used for the real data analysis. NUTS sampling in Stan struggled with the noncentered parameterizations for the real data analysis but centering fixed this.
