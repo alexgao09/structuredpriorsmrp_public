@@ -530,7 +530,7 @@ plot(
                                                   ymin = -Inf,
                                                   ymax = Inf),
               alpha = 0.1,fill = "gray93", colour = NA, show.legend=FALSE) +
-    geom_jitter(alpha=0.1) + 
+    geom_jitter(alpha=0.1, show.legend=FALSE) + 
     geom_point(aes(x = age_cat, y = mrp),
                size=7,
                colour = "black",
@@ -610,7 +610,7 @@ plot(
                                                   ymin = -Inf,
                                                   ymax = Inf),
               alpha = 0.1,fill = "gray93", colour = NA, show.legend=FALSE) +
-    geom_jitter(alpha=0.1) + 
+    geom_jitter(alpha=0.1, show.legend=FALSE) + 
     geom_smooth(aes(group=Model), method="loess", size=2.5, se=FALSE) + 
     facet_wrap(. ~ prob_sampling_old,ncol=3,nrow=3, labeller = as_labeller(
       function(value) {
