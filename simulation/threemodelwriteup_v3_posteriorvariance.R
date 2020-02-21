@@ -524,19 +524,13 @@ png(paste0("allmedians_facet",
 
 
 plot(
-  ggplot(regression_df_all200, aes(x=age_cat, y=posterior_medians, color=Model)) + #geom_point(size=5)+
+  ggplot(regression_df_all200, aes(x=age_cat, y=posterior_medians, color=Model, linetype=Model)) + #geom_point(size=5)+
     geom_rect(regression_df_all200, mapping = aes(xmin = (2 * (age_grouping_multiplier * 2/3) + 1)/2,
                                                   xmax = Inf,
                                                   ymin = -Inf,
                                                   ymax = Inf),
               alpha = 0.1,fill = "gray93", colour = NA, show.legend=FALSE) +
     geom_jitter(alpha=0.1) + 
-    geom_smooth(aes(group=Model), method="loess", size=2.5, se=FALSE) + 
-    facet_wrap(. ~ prob_sampling_old,ncol=3,nrow=3, labeller = as_labeller(
-      function(value) {
-        return(value)  # Lets you change the facet labels
-      })
-    ) +
     geom_point(aes(x = age_cat, y = mrp),
                size=7,
                colour = "black",
@@ -544,6 +538,12 @@ plot(
                show.legend = F,
                data = points_df_final,
                inherit.aes = F) +
+    geom_smooth(aes(group=Model), method="loess", size=2.5, se=FALSE) + 
+    facet_wrap(. ~ prob_sampling_old,ncol=3,nrow=3, labeller = as_labeller(
+      function(value) {
+        return(value)  # Lets you change the facet labels
+      })
+    ) +
     xlab("\n Age Category \n") +
     ylab(paste("\n Median of", runs,"Posteriors \n")) +
     scale_x_continuous(breaks= scales::pretty_breaks()) + 
@@ -604,7 +604,7 @@ png(paste0("allquantilediff_facet",
     width=3000, height=2400)
 
 plot(
-  ggplot(regression_df_all200_postsd, aes(x=age_cat, y=quantildiff90_10, color=Model)) + #geom_point(size=5)+
+  ggplot(regression_df_all200_postsd, aes(x=age_cat, y=quantildiff90_10, color=Model, linetype=Model)) + #geom_point(size=5)+
     geom_rect(regression_df_all200_postsd, mapping = aes(xmin = (2 * (age_grouping_multiplier * 2/3) + 1)/2,
                                                   xmax = Inf,
                                                   ymin = -Inf,
