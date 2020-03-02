@@ -15,7 +15,7 @@ library(matrixStats)
 # Global params -------------------------------------------
 
 save_ridgeplots = TRUE 
-sample_size = 100
+sample_size = 500
 runs = 200
 r = 1:9/10
 income_multiplier = 1 # partitions income into more categories
@@ -553,7 +553,7 @@ plot(
           axis.title=element_text(size=50, face="bold",margin=200),
           legend.text = element_text(size=50),
           legend.position  = "bottom",
-          legend.key.size = unit(30,"line"),
+          legend.key.size = unit(25,"line"),
           legend.key.height = unit(7,"line"),
           legend.key = element_rect(fill = "transparent",color = "transparent"),
           legend.title = element_text(size=50, face="bold"),
@@ -626,7 +626,7 @@ plot(
           axis.title=element_text(size=50, face="bold",margin=200),
           legend.text = element_text(size=50),
           legend.position  = "bottom",
-          legend.key.size = unit(30,"line"),
+          legend.key.size = unit(25,"line"),
           legend.key.height = unit(7,"line"),
           legend.key = element_rect(fill = "transparent",color = "transparent"),
           legend.title = element_text(size=50, face="bold"),
