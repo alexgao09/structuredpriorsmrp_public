@@ -1,4 +1,4 @@
-# run this script after threemodelwriteup_v3_posteriorvariance.R to get the plots for the overleaf paper. 
+# run this script after threemodelwriteup_v3_posteriorvariance.R to get the main plots in the paper
 # this script corresponds to n=100, 500
 rm(list=ls()) # clear previous workspace
 gc()
