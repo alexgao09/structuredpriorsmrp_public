@@ -8,7 +8,7 @@
 
 Arxiv preprint: https://arxiv.org/abs/1908.06716
 
-## Steps to run simulation pipeline in simulation directory
+## Steps to run simulation pipeline in simulation directory (directed structured priors example)
 1. The two .dta files in poststrat_pipeline_testing_age3_v3_posteriorvariance.R are retrieved from the paper, Estimating State Public Opinion with Multi-level Regression and Poststratification using R. URL: https://scholar.princeton.edu/jkastellec/publications. Download these two files before running the simulation pipeline, and put them in the simulation directory.
 
 2. Choose age preference curve with coef_age in poststrat_pipeline_testing_age3_v3_posteriorvariance.R
@@ -19,6 +19,11 @@ Arxiv preprint: https://arxiv.org/abs/1908.06716
 
 5. Run threemodelwriteup_v3_posteriorvariance.R with the same configurations. This will produce the bias plots shown in the paper for a given configuration.
 
+## Steps to run simulation pipeline in simulation_spatialmrp directory (undirected structured priors example)
+
+1. Choose sample_size in icar_mrp_simulation_bym2.R and then run the script. This conducts spatial MRP simulations, based off binomial regression
+
+2. Run icar_mrp_viz.R with the same configurations to visualize the spatial MRP simulations
 
 ## Steps to run data analysis on 2008 Annenberg phone survey in realdata_annenberg directory
 1. Request access for the 2008 National Annenberg Election Survey (NAES) telephone from the Annenberg Public Policy Center and put the phone survey text file into the realdata_annenberg directory. Rename it to annenbergphone2008.txt
@@ -48,3 +53,5 @@ acs_ps %>% group_by(education) %>%
 3. For a working simulation example that doesn't require downloading data files, see my StanCon 2019 repo.
 
 4. Noncentered parameterizations were used for the simulation studies whereas centered parameterizations were used for the real data analysis. NUTS sampling in Stan struggled with the noncentered parameterizations for the real data analysis but centering fixed this.
+
+5. In the simulation_spatialmrp directory: poverty_poststrat.rds contains the poststratification matrix that's derived from the 2013-2017 5-year ACS, ma_adj_matrix_sparse.rds contains the adjacency matrix of the 52 PUMAs in the state MA, smooth_x.rds contains a sample from a Gaussian Markov random field over the space of 52 PUMAs. ma_adj_matrix_sparse.rds is derived from the tigris package.
