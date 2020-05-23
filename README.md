@@ -19,11 +19,15 @@ Arxiv preprint: https://arxiv.org/abs/1908.06716
 
 5. Run threemodelwriteup_v3_posteriorvariance.R with the same configurations. This will produce the bias plots shown in the paper for a given configuration.
 
+6. Run proportion_agecat.R to visualize the share of simulations that the RW and AR priors outperformed the IID priors
+
 ## Steps to run simulation pipeline in simulation_spatialmrp directory (undirected structured priors example)
 
 1. Choose sample_size in icar_mrp_simulation_bym2.R and then run the script. This conducts spatial MRP simulations, based off binomial regression
 
 2. Run icar_mrp_viz.R with the same configurations to visualize the spatial MRP simulations
+
+3. Run proportion_puma.R to visualize share of simulations that the BYM2 priors outperformed the IID priors
 
 ## Steps to run data analysis on 2008 Annenberg phone survey in realdata_annenberg directory
 1. Request access for the 2008 National Annenberg Election Survey (NAES) telephone from the Annenberg Public Policy Center and put the phone survey text file into the realdata_annenberg directory. Rename it to annenbergphone2008.txt
