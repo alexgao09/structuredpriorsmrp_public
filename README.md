@@ -6,7 +6,7 @@
 - Daniel Simpson
 - Andrew Gelman
 
-Arxiv preprint: https://arxiv.org/abs/1908.06716
+Accepted for publication in _Bayesian Analysis_. arXiv preprint: https://arxiv.org/abs/1908.06716
 
 ## Steps to run simulation pipeline in simulation directory (directed structured priors example)
 1. The two .dta files in poststrat_pipeline_testing_age3_v3_posteriorvariance.R are retrieved from the paper, Estimating State Public Opinion with Multi-level Regression and Poststratification using R. URL: https://scholar.princeton.edu/jkastellec/publications. Download these two files before running the simulation pipeline, and put them in the simulation directory.
